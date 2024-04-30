@@ -1,0 +1,5 @@
+name: langtrace-aca
+metadata:
+  template: langtrace-aca@0.0.1
+infra:
+  provider: terraform
