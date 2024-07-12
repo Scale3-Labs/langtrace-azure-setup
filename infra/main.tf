@@ -108,6 +108,11 @@ resource "azurerm_linux_web_app" "langtrace_app_service" {
       ADMIN_EMAIL                    = var.admin_email
       ADMIN_PASSWORD                 = var.admin_password
       NEXT_PUBLIC_ENABLE_ADMIN_LOGIN = true
+
+      # Azure AD Variables
+      AZURE_AD_CLIENT_ID     = var.azure_ad_client_id
+      AZURE_AD_CLIENT_SECRET = var.azure_ad_client_secret
+      AZURE_AD_TENANT_ID     = var.azure_ad_tenant_id
     }
   )
 
