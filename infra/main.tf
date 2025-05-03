@@ -83,7 +83,7 @@ resource "azurerm_linux_web_app" "langtrace_app_service" {
   app_settings = merge(var.static_env_variables,
     {
       # Postgres Variables
-      POSTGRES_HOST            = azurerm_postgresql_flexible_server.langtrace_postgresql_server.fqdn
+      POSTGRES_HOST            = "${azurerm_postgresql_flexible_server.langtrace_postgresql_server.fqdn}:5432"
       POSTGRES_USER            = var.postgres_admin_username
       POSTGRES_PASSWORD        = var.postgres_admin_password
       POSTGRES_DATABASE        = var.postgres_database_name
