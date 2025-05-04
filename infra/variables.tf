@@ -72,18 +72,15 @@ variable "admin_password" {
 # Azure AD Variables
 variable "azure_ad_client_id" {
   description = "Azure AD Client ID"
-  default     = ""
 }
 
 variable "azure_ad_client_secret" {
   description = "Azure AD Client Secret"
-  default     = ""
   sensitive   = true
 }
 
 variable "azure_ad_tenant_id" {
   description = "Azure AD Tenant ID"
-  default     = ""
 }
 
 variable "clickhouse_host" {
